@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app='ToDoApp'>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style/styles.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <title>ToDo List</title>
+  </head>
+  <body>
+    
+  <div class="content">
+    <!-- LIST #1 - unlimited items -->
+    <div  ng-controller='ToDoListController as todo'>
+      <div class="container">
+      <h2>Add things to be done</h2>
+      <input type="text" id="thing" ng-model="todo.thing" placeholder="Ex: Workout at 4pm" class="typewriter" ng-enter="todo.addthing();">
+      <button type="submit" class="button" ng-click="todo.addthing();">+</button>
+      <div class="liststyle">
+      <ol>
+        <li ng-repeat="list in todo.list">
+          {{ list.name }} 
+          <button ng-click="todo.removething($index);" class="button1">Remove</button>
+          <button ng-click="todo.ToDoDone($index)" class="button1">Done</button>
+        </li>
+      </ol>
+      <!--<div ng-if="todo.list.length === 0" class="emptyMessage">Write Something on the box to do</div> -->
+      <div class="error" id="errmessage"></div>
+      <h3>{{todo.message}}</h3>
+
+    </div>
+
+    <!-- Already Bought List -->
+    <div class="done">
+    <div class="col-md-6" ng-controller="AlreadyDoneController as alreadyDone">
+     <ol>
+       <li ng-repeat="list in alreadyDone.list">{{ list.name }} <i class='fas fa-check-circle doneicon' style='font-size:24px'></i></li>
+     </ol>
+     <div ng-if="alreadyDone.list.length === 0" class="emptyMessage">Nothing done yet. Just a Reminder.</div>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+  </div>
+</div>
+ 
+
+
+  </body>
+</html>

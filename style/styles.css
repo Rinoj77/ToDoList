@@ -1,0 +1,176 @@
+* {
+margin: 0;
+padding: 0;
+}
+
+@font-face {
+   font-family: comicbi;
+   src: url(../fonts/ComicNeue-BoldItalic.ttf);
+}
+
+@font-face {
+   font-family: comic;
+   src: url(../fonts/ComicNeue-Regular.ttf);
+}
+
+@font-face {
+   font-family: comicb;
+   src: url(../fonts/ComicNeue-Bold.ttf);
+}
+
+@font-face {
+   font-family: reenie;
+   src: url(../fonts/ReenieBeanie-Regular.ttf);
+}
+
+@font-face {
+   font-family: mirinda;
+   src: url(../fonts/MeriendaOne-Regular.ttf);
+}
+
+
+
+.emptyMessage {
+        font-weight: bold;
+        font-family: mirinda;
+        color: red;
+        font-size: 1.2em;
+      }
+      li > button {
+        position: relative;
+      }
+      li {
+        font-size: 18px;
+      }
+      button > span {
+        color: green;
+      }
+      ol {
+        list-style-position: outside;
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+      }
+      h1,h2 {
+        text-align: center;
+        font-family: comicbi;
+      }
+.liststyle {
+  text-align: center;
+}
+
+.liststyle li {
+  margin-bottom: 4px;
+}
+
+      
+body {
+  background-color:  #B8E0D1;
+}
+.error {
+  color: red;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: comicb;
+}
+
+.content
+{
+  margin-top: 50px;
+  text-align: center;
+  border: 1px solid #D7FAED;
+  box-shadow: 5px 8px 8px 10px #8BAEA0;
+  display: block;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding-bottom: 40px;
+  background-color: #BFECDB;
+}
+
+.content h3 {
+  margin-top: 10px;
+  color: red;
+
+}
+
+.container{
+  padding-top: 40px;
+}
+
+input[type=text] {
+  width: 50%;
+  height: 50%;
+  font-size: 18px;
+  font-family: comic;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #779589;
+  border-radius: 4px;
+}
+
+.button {
+  background-color: white; 
+  padding: 9px 12px 9px 12px;
+  text-decoration: bold;
+  color: black; 
+  border: none;
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border: 2px solid #779589; 
+}
+.button:hover {
+  background-color: #B1D4C7;
+  color: #779589;
+}
+
+.button1 {
+  background-color: #B8E0D1; 
+  padding: 5px 8px 5px 8px;
+  text-decoration: bold;
+  color: black; 
+  border: none;
+  text-align: center;
+  display: inline-block;
+  font-size: 15px;
+  margin: 2px 2px;
+  cursor: pointer;
+  border: 2px solid #B1D4C7; 
+}
+.button1:hover {
+  background-color: #B1D4C7;
+  color: #3B4A45;
+}
+
+.done {
+  margin-top: 10px;
+}
+.doneicon {
+  position: relative;
+  font-size: 20px;
+  color: #779589;
+  margin-left: 6px;
+}
+
+
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid black; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation: 
+    typing 1.5s steps(30, end),
+    blink-caret .5s step-end;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 50%; }
+}
+
